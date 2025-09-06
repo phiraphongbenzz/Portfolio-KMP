@@ -38,6 +38,10 @@ kotlin {
     
     sourceSets {
         androidMain.dependencies {
+            implementation(project.dependencies.platform("com.google.firebase:firebase-bom:${libs.versions.firebase.bom.get()}"))
+            implementation(libs.firebase.analytics)
+            implementation(libs.firebase.auth)
+            implementation(libs.firebase.firestore)
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
         }
