@@ -9,6 +9,8 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.composeHotReload)
+    alias(libs.plugins.googleServices)
+    alias(libs.plugins.firebaseCrashlytics)
 }
 
 kotlin {
@@ -42,6 +44,7 @@ kotlin {
             implementation(libs.firebase.analytics)
             implementation(libs.firebase.auth)
             implementation(libs.firebase.firestore)
+            implementation(libs.firebase.crashlytics)
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
         }
